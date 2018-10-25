@@ -8,7 +8,7 @@
 		<Build>
 			<Target title="Windows">
 				<Option output="dist/windows/Start" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="../CGTP1" />
+				<Option working_dir="./" />
 				<Option object_output="build/windows/" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -28,7 +28,7 @@
 			</Target>
 			<Target title="Linux">
 				<Option output="dist/linux/Start" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="../CGTP1" />
+				<Option working_dir="./" />
 				<Option object_output="build/linux/" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -49,9 +49,23 @@
 			<Add option="-Wall" />
 			<Add option="-g" />
 		</Compiler>
+		<Unit filename="Game-SRC/Cameras.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Game-SRC/Desenhos.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Game-SRC/GLM/glm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Game-SRC/GLM/glm.h" />
+		<Unit filename="Game-SRC/GLM/glm_util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Game-SRC/GLM/glmimg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Game-SRC/GLM/glmint.h" />
 		<Unit filename="Game-SRC/GameLogic.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -60,6 +74,12 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Game-SRC/Inputs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Game-SRC/Lights.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Game-SRC/Models.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Game-SRC/Objects.c">
@@ -72,23 +92,44 @@
 		<Unit filename="Game-SRC/Player.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Game-SRC/PowerUp_invulnerability.c">
+		<Unit filename="Game-SRC/SOIL/SOIL.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Game-SRC/Scores.c">
+		<Unit filename="Game-SRC/SOIL/SOIL.h" />
+		<Unit filename="Game-SRC/SOIL/image_DXT.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Game-SRC/SOIL/image_DXT.h" />
+		<Unit filename="Game-SRC/SOIL/image_helper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Game-SRC/SOIL/image_helper.h" />
+		<Unit filename="Game-SRC/SOIL/stb_image_aug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Game-SRC/SOIL/stb_image_aug.h" />
+		<Unit filename="Game-SRC/SOIL/stbi_DDS_aug.h" />
+		<Unit filename="Game-SRC/SOIL/stbi_DDS_aug_c.h" />
 		<Unit filename="Game-SRC/StateController.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Game-SRC/StateController.h" />
+		<Unit filename="Game-SRC/StateCredits.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Game-SRC/StateGame.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Game-SRC/StateInGameMenu.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Game-SRC/StateLoading.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Game-SRC/StateMenu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Game-SRC/StateOption.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Game-SRC/Texto.c">
@@ -103,9 +144,16 @@
 		<Unit filename="Game-SRC/Wait.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Game-SRC/Window.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Game-SRC/main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Game-SRC/obj.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Game-SRC/obj.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
