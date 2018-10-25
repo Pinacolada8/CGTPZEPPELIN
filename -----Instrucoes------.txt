@@ -1,0 +1,24 @@
+--------------------------------------
+--------------------------------------
+--------------------------------------
+--------------------------------------
+--------------------------------------
+--------------------------------------
+
+
+-> Utilizando MAKEFILE ----------------->> Apos Utilizar o Comando o executavel estara presente dentro da pasta ".\dist\Debug\MinGW-Windows\(EXECUTAVEL AKI)
+						--OBS:FUNCIONA PARA WINDOWS E LINUX (CASO NAO ACONTECER ALGUM ERRO UTILIZE O COMANDO MANUAL, e me informe por favor)
+						--OBS:A pasta nbproject deve estar presente OBRIGATORIAMENTE
+
+-> Utilizando o arquivo BAT ------------>>Windows-> Apos Utilizar o BAT, o arquivo compilado estara na pasta raiz, como START.EXE
+
+-> Comando para compilar Manualmente --->>Windows-> gcc -o Start Game-SRC/* -lfreeglut -lglu32 -lglew32 -lSOIL -lopengl32 -lm
+   "   "   "   "   "   "   "   "   " --->>Linux  -> gcc -o Start Game-SRC/* -lglut -lGLU -lGLEW -lSOIL -lGL -lm
+
+
+--------------------------------------
+--------------------------------------
+--------------------------------------
+--------------------------------------
+--------------------------------------
+--------------------------------------

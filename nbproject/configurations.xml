@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="SourceFiles"
+                   displayName="Arquivos de Código-Fonte"
+                   projectFiles="true">
+      <logicalFolder name="Game-SRC" displayName="GameSRC" projectFiles="true">
+        <logicalFolder name="f2" displayName="Addons" projectFiles="true">
+          <itemPath>Game-SRC/Lights.c</itemPath>
+          <itemPath>Game-SRC/Physics.c</itemPath>
+          <itemPath>Game-SRC/Timer.c</itemPath>
+          <itemPath>Game-SRC/Wait.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f3" displayName="Drawing" projectFiles="true">
+          <itemPath>Game-SRC/Desenhos.c</itemPath>
+          <itemPath>Game-SRC/Models.c</itemPath>
+          <itemPath>Game-SRC/Texto.c</itemPath>
+          <itemPath>Game-SRC/Textures.c</itemPath>
+          <itemPath>Game-SRC/Window.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f5" displayName="Game" projectFiles="true">
+          <itemPath>Game-SRC/GameLogic.c</itemPath>
+          <itemPath>Game-SRC/InGameMenu.c</itemPath>
+          <itemPath>Game-SRC/Inputs.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="GLM" displayName="GLM" projectFiles="true">
+          <itemPath>Game-SRC/GLM/glm.c</itemPath>
+          <itemPath>Game-SRC/GLM/glm.h</itemPath>
+          <itemPath>Game-SRC/GLM/glm_util.c</itemPath>
+          <itemPath>Game-SRC/GLM/glmimg.c</itemPath>
+          <itemPath>Game-SRC/GLM/glmint.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f4" displayName="Objects" projectFiles="true">
+          <itemPath>Game-SRC/Cameras.c</itemPath>
+          <itemPath>Game-SRC/Objects.c</itemPath>
+          <itemPath>Game-SRC/Objects.h</itemPath>
+          <itemPath>Game-SRC/Player.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="SOIL" displayName="SOIL" projectFiles="true">
+          <itemPath>Game-SRC/SOIL/SOIL.c</itemPath>
+          <itemPath>Game-SRC/SOIL/SOIL.h</itemPath>
+          <itemPath>Game-SRC/SOIL/image_DXT.c</itemPath>
+          <itemPath>Game-SRC/SOIL/image_DXT.h</itemPath>
+          <itemPath>Game-SRC/SOIL/image_helper.c</itemPath>
+          <itemPath>Game-SRC/SOIL/image_helper.h</itemPath>
+          <itemPath>Game-SRC/SOIL/stb_image_aug.c</itemPath>
+          <itemPath>Game-SRC/SOIL/stb_image_aug.h</itemPath>
+          <itemPath>Game-SRC/SOIL/stbi_DDS_aug.h</itemPath>
+          <itemPath>Game-SRC/SOIL/stbi_DDS_aug_c.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f1" displayName="States" projectFiles="true">
+          <itemPath>Game-SRC/StateController.c</itemPath>
+          <itemPath>Game-SRC/StateController.h</itemPath>
+          <itemPath>Game-SRC/StateCredits.c</itemPath>
+          <itemPath>Game-SRC/StateGame.c</itemPath>
+          <itemPath>Game-SRC/StateInGameMenu.c</itemPath>
+          <itemPath>Game-SRC/StateLoading.c</itemPath>
+          <itemPath>Game-SRC/StateMenu.c</itemPath>
+          <itemPath>Game-SRC/StateOption.c</itemPath>
+        </logicalFolder>
+        <itemPath>Game-SRC/Geral.h</itemPath>
+        <itemPath>Game-SRC/main.c</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Arquivos de Recurso"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Arquivos de Teste"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Arquivos Importantes"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Arquivos Importantes"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>Game-SRC</Elem>
+    <Elem>Game-SRC</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <incDir>
+            <pElem>GameResources/Include</pElem>
+          </incDir>
+        </cTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/start</output>
+          <linkerAddLib>
+            <pElem>GameResources/Lib</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>freeglut</linkerLibLibItem>
+            <linkerLibLibItem>glu32</linkerLibLibItem>
+            <linkerLibLibItem>glew32</linkerLibLibItem>
+            <linkerLibLibItem>SOIL</linkerLibLibItem>
+            <linkerLibLibItem>opengl32</linkerLibLibItem>
+            <linkerLibLibItem>m</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>-Wall -g</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="Game-SRC/Cameras.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Desenhos.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glm_util.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glmimg.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glmint.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/GameLogic.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Geral.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/InGameMenu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Inputs.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Lights.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Models.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Objects.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Objects.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/Physics.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Player.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/SOIL.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/SOIL.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/image_DXT.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/image_DXT.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/image_helper.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/image_helper.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/stb_image_aug.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/stb_image_aug.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/stbi_DDS_aug.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/stbi_DDS_aug_c.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateController.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateCredits.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateGame.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateInGameMenu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateLoading.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateMenu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateOption.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Texto.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Textures.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Timer.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Wait.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Window.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/main.c" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>GameResources/Include</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/Start</output>
+          <linkerAddLib>
+            <pElem>GameResources/Lib</pElem>
+          </linkerAddLib>
+        </linkerTool>
+      </compileType>
+      <item path="Game-SRC/Cameras.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Desenhos.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glm_util.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glmimg.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glmint.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/GameLogic.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Geral.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/InGameMenu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Inputs.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Lights.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Models.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Objects.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Objects.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/Physics.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Player.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/SOIL.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/SOIL.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/image_DXT.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/image_DXT.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/image_helper.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/image_helper.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/stb_image_aug.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/stb_image_aug.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/stbi_DDS_aug.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/stbi_DDS_aug_c.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateController.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateCredits.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateGame.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateInGameMenu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateLoading.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateMenu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateOption.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Texto.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Textures.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Timer.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Wait.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Window.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/main.c" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+    <conf name="linux" type="1" platformSpecific="true">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <platform>2</platform>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <incDir>
+            <pElem>GameResources/Include</pElem>
+          </incDir>
+        </cTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/Start</output>
+          <linkerAddLib>
+            <pElem>GameResources/Lib</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerOptionItem>-lglut -lGLU -lGLEW -lSOIL -lGL -lm</linkerOptionItem>
+          </linkerLibItems>
+          <commandLine>-g -Wall</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="Game-SRC/Cameras.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Desenhos.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glm_util.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glmimg.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glmint.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/GameLogic.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Geral.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/InGameMenu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Inputs.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Lights.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Models.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Objects.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Objects.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/Physics.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Player.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/SOIL.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/SOIL.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/image_DXT.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/image_DXT.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/image_helper.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/image_helper.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/stb_image_aug.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/stb_image_aug.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/stbi_DDS_aug.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/stbi_DDS_aug_c.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateController.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateCredits.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateGame.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateInGameMenu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateLoading.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateMenu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateOption.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Texto.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Textures.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Timer.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Wait.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Window.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/main.c" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Windows" type="1" platformSpecific="true">
+      <toolsSet>
+        <compilerSet>MinGW|MinGW</compilerSet>
+        <platform>3</platform>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <incDir>
+            <pElem>GameResources/Include</pElem>
+          </incDir>
+        </cTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/Start</output>
+          <linkerAddLib>
+            <pElem>GameResources/Lib</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>freeglut</linkerLibLibItem>
+            <linkerLibLibItem>glu32</linkerLibLibItem>
+            <linkerLibLibItem>glew32</linkerLibLibItem>
+            <linkerLibLibItem>SOIL</linkerLibLibItem>
+            <linkerLibLibItem>opengl32</linkerLibLibItem>
+            <linkerLibLibItem>m</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>-Wall -g</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="Game-SRC/Cameras.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Desenhos.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glm_util.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glmimg.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/GLM/glmint.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/GameLogic.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Geral.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/InGameMenu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Inputs.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Lights.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Models.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Objects.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Objects.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/Physics.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Player.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/SOIL.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/SOIL.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/image_DXT.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/image_DXT.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/image_helper.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/image_helper.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/stb_image_aug.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/stb_image_aug.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/stbi_DDS_aug.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/SOIL/stbi_DDS_aug_c.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateController.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateCredits.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateGame.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateInGameMenu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateLoading.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateMenu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/StateOption.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Texto.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Textures.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Timer.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Wait.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/Window.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Game-SRC/main.c" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

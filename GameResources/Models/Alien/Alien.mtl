@@ -1,0 +1,9 @@
+# Exported from 3D Builder
+
+newmtl Material.Alien
+Ns 16
+Ka 0.20 0.43 0.06
+Kd 0.20 0.43 0.06
+Ks 0.3 0.3 0.3
+illum 1
+
