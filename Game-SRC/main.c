@@ -15,8 +15,6 @@ int RESOLUTION_WIDTH = 1280;//RESOLUCAO
 int RESOLUTION_HEIGHT = 720;//RESOLUCAO
 bool pause = True;
 
-int teste;
-
 int main(int argc, char** argv) {
 
     // Acordando o GLUT
