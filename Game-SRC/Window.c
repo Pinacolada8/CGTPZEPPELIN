@@ -2,7 +2,7 @@
 
 #include "Geral.h"
 
-#define FOV_DEFAULT 60 // FOV Padrao
+
 
 void configura3D(){
     glMatrixMode(GL_PROJECTION);

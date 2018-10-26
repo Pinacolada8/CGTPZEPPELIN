@@ -18,6 +18,7 @@
 //Constantes universais
 #define ASPECT_RATIO 1.777777778 //proporcao da tela
 #define VIEW_DISTANCE 5000 // Distancia maxima da visao
+#define FOV_DEFAULT 60 // FOV Padrao
 #define MAX_X  1600 // Valor maximo de unidades na direcao X
 #define MAX_Y  820 // Valor maximo de unidades na direcao Y(sem contar com a profundidade do chao)
 #define FLOOR_DEPTH 80 //Profundidade do chao do jogo
@@ -151,7 +152,8 @@ void closeInGameMenu();
 //States
 void selectState(StateSelection selection);
 //Lights
-void startLights();
+void configuraLights();
+void configuraFog();
 //-------------------------
 
 // Contem as Variaveis Globais Universais utilizadas(Compartilhadas entre arquivos)
@@ -169,6 +171,7 @@ extern GLuint modelLists[];
 extern float const tickFreq;
 extern float rotationUFO;
 extern bool lightON;
+extern bool fogON;
 //Player
 extern PlayerObject player;
 //Cameras

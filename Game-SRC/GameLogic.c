@@ -8,6 +8,8 @@ const float tickFreq = 1000/TICK_MSEC;//Representa a Frequencia do programa
 const float DefaultColor[] = {1,1,1,1};
 
 bool lightON = True;
+bool fogON = False;
+
 float rotationUFO = 0;
 
 
@@ -45,7 +47,8 @@ void loadGame(){
     loadTimer();
     startCameras();
     loadPlayer(PLAYER_STARTPOSX,PLAYER_STARTPOSY,PLAYER_STARTPOSZ,PLAYER_STARTANGLE,(float*)DefaultColor,CAMERA_QTDE,cameras, NULL);//ALTERAR
-    startLights();
+    configuraLights();
+    configuraFog();
     endPause();
 }
 

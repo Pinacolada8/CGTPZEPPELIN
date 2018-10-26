@@ -7,6 +7,7 @@
 
 void drawGame(void) {   
     int i;
+    char aux[50];
     configura3D();    
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glEnable(GL_TEXTURE_2D);     
@@ -49,17 +50,16 @@ void drawGame(void) {
     
     drawRelogio(TIMER_POSX,TIMER_POSY,getTimer());    
     
-    //Coordenadas~start
-    char coordernadas[50];
-    sprintf(coordernadas,"X:%.2f Y:%.2f Z:%.2f",player.x,player.y,player.z);
-    drawTextHUD(1200,700,coordernadas);
+    //Coordenadas~start    
+    sprintf(aux,"X:%.2f Y:%.2f Z:%.2f",player.x,player.y,player.z);
+    drawTextHUD(1200,700,aux);
     //end~Coordenadas
     
     //Rotacao~start
-    sprintf(coordernadas,"RotationAngle: %.2f",player.rotationAngle);
-    drawTextHUD(1200,650,coordernadas);
+    sprintf(aux,"RotationAngle: %.2f",player.rotationAngle);
+    drawTextHUD(1200,650,aux);    
     //end~Rotacao
-    
+     
     if((pause == True) && (inGameMenuActive == False)){
         drawNotificationSquare(PAUSE_POSX,PAUSE_POSY,PAUSE_BASE,PAUSE_ALT, texturas[0]);
     }

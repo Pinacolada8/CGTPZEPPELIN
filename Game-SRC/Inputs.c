@@ -1,5 +1,7 @@
 
 //Define que faz parte do pacote
+#include <GL/glew.h>
+
 #include "Geral.h"
 
 //Controla todo o input do jogo
@@ -43,7 +45,7 @@ void teclado(unsigned char key, int x, int y) {
             
         case '1':
             cameraAtual = 0;
-            cameraPitch = 0;
+            cameraPitch = M_PI_4;
             break; 
             
         case '2':
@@ -75,6 +77,17 @@ void teclado(unsigned char key, int x, int y) {
         case 'l':
         case 'L':
             lightON = !lightON;
+            break;
+            
+        case 'f':
+        case 'F':
+            if (fogON){
+                glDisable(GL_FOG);
+                fogON = False;
+            }else{
+                glEnable(GL_FOG);
+                fogON = True;
+            }
             break;
             
         default:

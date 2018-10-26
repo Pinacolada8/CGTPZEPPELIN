@@ -11,13 +11,6 @@
           <itemPath>Game-SRC/Timer.c</itemPath>
           <itemPath>Game-SRC/Wait.c</itemPath>
         </logicalFolder>
-        <logicalFolder name="f3" displayName="Drawing" projectFiles="true">
-          <itemPath>Game-SRC/Desenhos.c</itemPath>
-          <itemPath>Game-SRC/Models.c</itemPath>
-          <itemPath>Game-SRC/Texto.c</itemPath>
-          <itemPath>Game-SRC/Textures.c</itemPath>
-          <itemPath>Game-SRC/Window.c</itemPath>
-        </logicalFolder>
         <logicalFolder name="f5" displayName="Game" projectFiles="true">
           <itemPath>Game-SRC/GameLogic.c</itemPath>
           <itemPath>Game-SRC/InGameMenu.c</itemPath>
@@ -35,6 +28,13 @@
           <itemPath>Game-SRC/Objects.c</itemPath>
           <itemPath>Game-SRC/Objects.h</itemPath>
           <itemPath>Game-SRC/Player.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f3" displayName="Screen" projectFiles="true">
+          <itemPath>Game-SRC/Desenhos.c</itemPath>
+          <itemPath>Game-SRC/Models.c</itemPath>
+          <itemPath>Game-SRC/Texto.c</itemPath>
+          <itemPath>Game-SRC/Textures.c</itemPath>
+          <itemPath>Game-SRC/Window.c</itemPath>
         </logicalFolder>
         <logicalFolder name="SOIL" displayName="SOIL" projectFiles="true">
           <itemPath>Game-SRC/SOIL/SOIL.c</itemPath>
