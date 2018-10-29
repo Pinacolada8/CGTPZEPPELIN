@@ -28,6 +28,8 @@ void drawGame(void) {
     if (lightON){ //Liga o esquema de iluminacao
         glEnable(GL_LIGHTING);
     }
+    glEnable(masterLight);
+    
     //ObjetoPrincipal~start
     drawUFO(&models[0],rotationUFO);
     //end~ObjetoPrincipal
@@ -36,8 +38,8 @@ void drawGame(void) {
     glPushMatrix();
     //Movendo o cenario em relacao ao objeto principal    
     glRotatef(player.rotationAngle,0,1,0);
-    glTranslatef(player.x,-player.y,-player.z);       
-    glLightfv(GL_LIGHT0,GL_POSITION,sunLightPos); //Luz Do Sol
+    glTranslatef(player.x,-player.y,-player.z);      
+    glLightfv(masterLight,GL_POSITION,masterLightPos); //Luz Principal (SOL ou LUA)   
     glColor4f(1,1,1,1);
     glPushMatrix();    
     glScalef(CITY_SCALEMULTIPLAYER,CITY_SCALEMULTIPLAYER,CITY_SCALEMULTIPLAYER);
@@ -46,6 +48,7 @@ void drawGame(void) {
     glPopMatrix();
     //end~Cenario
     
+    glDisable(masterLight);
     glDisable(GL_LIGHTING);
     
     drawRelogio(TIMER_POSX,TIMER_POSY,getTimer());    

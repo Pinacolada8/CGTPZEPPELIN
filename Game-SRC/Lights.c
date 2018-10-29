@@ -2,21 +2,31 @@
 
 #include "Geral.h"
 
-float sunLightPos[] = {1,1,0,0};
+float masterLightPos[] = {1,1,0,0};
 const float sunLightColor[] = {1,1,1,1};
 const float sunLightAmbientColor[] = {0.35,0.35,0.35,1};
 const float fogColor[] = {0.5,0.5,0.5,1};
+const float moonLightColor[] = {0.5,0.5,0.5,1};
+const float moonLightAmbientColor[] = {0.05,0.05,0.05,1};
 
 
 void configuraLights(){  
     //SUN~Start
-    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, sunLightAmbientColor);
-    glLightfv(GL_LIGHT0,GL_POSITION,sunLightPos);
-    //glLightfv(GL_LIGHT0,GL_AMBIENT,sunLightAmbientColor);
+    //glLightModelfv(GL_LIGHT_MODEL_AMBIENT, sunLightAmbientColor);
+    glLightfv(GL_LIGHT0,GL_POSITION,masterLightPos);
+    glLightfv(GL_LIGHT0,GL_AMBIENT,sunLightAmbientColor);
     glLightfv(GL_LIGHT0, GL_DIFFUSE, sunLightColor);
     glLightfv(GL_LIGHT0, GL_SPECULAR, sunLightColor);
-    glEnable(GL_LIGHT0);
+    //glEnable(GL_LIGHT0);    
     //end~SUN
+    
+    //MOON~Start
+    glLightfv(GL_LIGHT1,GL_POSITION,masterLightPos);
+    glLightfv(GL_LIGHT1,GL_AMBIENT,moonLightAmbientColor);
+    glLightfv(GL_LIGHT1, GL_DIFFUSE, moonLightColor);
+    glLightfv(GL_LIGHT1, GL_SPECULAR, moonLightColor);
+    //glEnable(GL_LIGHT1);
+    //MOON~End
 }
 
 void configuraFog(){

@@ -90,6 +90,15 @@ void teclado(unsigned char key, int x, int y) {
             }
             break;
             
+        case 'N':
+        case 'n':
+            if (masterLight == GL_LIGHT0){
+                masterLight = GL_LIGHT1;//Altera para a luz da lua
+            }else{
+                masterLight = GL_LIGHT0;//Altera para a luz do sol
+            }
+            break;            
+            
         default:
             break;
     }

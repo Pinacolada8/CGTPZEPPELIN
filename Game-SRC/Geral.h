@@ -172,6 +172,7 @@ extern float const tickFreq;
 extern float rotationUFO;
 extern bool lightON;
 extern bool fogON;
+extern GLenum masterLight;
 //Player
 extern PlayerObject player;
 //Cameras
@@ -187,7 +188,7 @@ extern bool inGameMenuActive;
 //Texto
 extern const float defaultColorTexto[4];
 //Lights
-extern float sunLightPos[];
+extern float masterLightPos[];
 //-------------------------
 
 

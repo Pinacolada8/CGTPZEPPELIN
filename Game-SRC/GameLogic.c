@@ -9,6 +9,7 @@ const float DefaultColor[] = {1,1,1,1};
 
 bool lightON = True;
 bool fogON = False;
+GLenum masterLight = GL_LIGHT0;
 
 float rotationUFO = 0;
 
