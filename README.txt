@@ -2,5 +2,19 @@
 
 - > CASO AO COMPILAR APARECA ALGUM PROBLEMA RELATIVO A FALTA DE BIBLIOTECAS, TODAS AS BIBLIOTECAS UTILIZADAS NO PROJETO ESTAO DENTRO DA PASTA "GameResources" <-
 
--> Alguns computadores utilizando linux apresentam problemas de compila��o na soucecode da SOIL, caso tenha este problema utilize outro computador/sistem Operacional ou 
+-> Alguns computadores utilizando linux apresentam problemas de compilação na soucecode da SOIL, caso tenha este problema utilize outro computador/sistem Operacional ou 
 	altere a importacao da soil de (#include "SOIL/SOIL.h") para (#include <SOIL/SOIL.h>), nos sequintes arquivos (Geral.h),(GLM/glmimg.c). <-
+	
+-> Implementações:
+	-BASICO (COMPLETO)
+	-SKYBOX
+	-FORMATO OBJ (Carregado com textura e material)
+	-FOG
+	-CAMERA 2 PODE ALTERAR OLHAR PARA CIMA E PARA BAIXO
+	-MENU COMPLETO
+	-TELA DE LOADING (Carregamento dos OBJs)
+	-UTILIZADO DISPLAY LIST (Teve um maior desempenho que VBOs)
+	-HUD DE COORDENADAS E ROTAÇÃO (Plano 2d em frente a tela)
+	-HUD TIMER (Representa um timer no tempo que passou dentro do jogo, representado em hud)
+	-IN-GAME-MENU (Menu ingame ao apertar a tecla ESC, permitindo voltar ao menu, continuar no game, ou sair do jogo)
+		<-
