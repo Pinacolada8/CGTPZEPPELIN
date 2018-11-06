@@ -52,6 +52,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Game-SRC/SOIL/image_DXT.o \
 	${OBJECTDIR}/Game-SRC/SOIL/image_helper.o \
 	${OBJECTDIR}/Game-SRC/SOIL/stb_image_aug.o \
+	${OBJECTDIR}/Game-SRC/Sound.o \
 	${OBJECTDIR}/Game-SRC/StateController.o \
 	${OBJECTDIR}/Game-SRC/StateCredits.o \
 	${OBJECTDIR}/Game-SRC/StateGame.o \
@@ -81,7 +82,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-LGameResources/Lib -lfreeglut -lglu32 -lglew32 -lSOIL -lopengl32 -lm
+LDLIBSOPTIONS=-LGameResources/Lib -lfreeglut -lglu32 -lglew32 -lSOIL -lopengl32 -lm -lfmod
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -175,6 +176,11 @@ ${OBJECTDIR}/Game-SRC/SOIL/stb_image_aug.o: Game-SRC/SOIL/stb_image_aug.c
 	${MKDIR} -p ${OBJECTDIR}/Game-SRC/SOIL
 	${RM} "$@.d"
 	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/SOIL/stb_image_aug.o Game-SRC/SOIL/stb_image_aug.c
+
+${OBJECTDIR}/Game-SRC/Sound.o: Game-SRC/Sound.c
+	${MKDIR} -p ${OBJECTDIR}/Game-SRC
+	${RM} "$@.d"
+	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/Sound.o Game-SRC/Sound.c
 
 ${OBJECTDIR}/Game-SRC/StateController.o: Game-SRC/StateController.c
 	${MKDIR} -p ${OBJECTDIR}/Game-SRC

@@ -9,9 +9,10 @@
 #include <math.h>
 #include <time.h>
 
+#include "FMOD/fmod.h"//Incluindo a biblioteca de FMOD para a utilizacao de sons
 #include "SOIL/SOIL.h"//Incluindo a source do soil com edicoes para consertar problemas de deprecacao
+#include "GLM/glm.h" //GLM library (Nate Robbins & Jeff Roggers) EDITADA PARA FUNCIONAR COM O SOIL E TGAs
 #include "Objects.h"
-#include "GLM/glm.h" //GLM library (Nate Robbins & Jeff Roggers) EDITADA PARA FUNCIONAR COM O SOIL E TGAs(Meu Orgulho)
 
 //-------------------------
 

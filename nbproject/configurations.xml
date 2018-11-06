@@ -8,6 +8,7 @@
         <logicalFolder name="f2" displayName="Addons" projectFiles="true">
           <itemPath>Game-SRC/Lights.c</itemPath>
           <itemPath>Game-SRC/Physics.c</itemPath>
+          <itemPath>Game-SRC/Sound.c</itemPath>
           <itemPath>Game-SRC/Timer.c</itemPath>
           <itemPath>Game-SRC/Wait.c</itemPath>
         </logicalFolder>
@@ -61,15 +62,6 @@
         <itemPath>Game-SRC/Geral.h</itemPath>
         <itemPath>Game-SRC/main.c</itemPath>
       </logicalFolder>
-    </logicalFolder>
-    <logicalFolder name="ResourceFiles"
-                   displayName="Arquivos de Recurso"
-                   projectFiles="true">
-    </logicalFolder>
-    <logicalFolder name="TestFiles"
-                   displayName="Arquivos de Teste"
-                   projectFiles="false"
-                   kind="TEST_LOGICAL_FOLDER">
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Arquivos Importantes"
@@ -171,6 +163,8 @@
       <item path="Game-SRC/SOIL/stbi_DDS_aug.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Game-SRC/SOIL/stbi_DDS_aug_c.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/Sound.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Game-SRC/StateController.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -284,6 +278,8 @@
       </item>
       <item path="Game-SRC/SOIL/stbi_DDS_aug_c.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Game-SRC/Sound.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="Game-SRC/StateController.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Game-SRC/StateController.h" ex="false" tool="3" flavor2="0">
@@ -332,7 +328,7 @@
             <pElem>GameResources/Lib</pElem>
           </linkerAddLib>
           <linkerLibItems>
-            <linkerOptionItem>-lglut -lGLU -lGLEW -lSOIL -lGL -lm</linkerOptionItem>
+            <linkerOptionItem>-lglut -lGLU -lGLEW -lSOIL -lGL -lm -lfmod</linkerOptionItem>
           </linkerLibItems>
           <commandLine>-g -Wall</commandLine>
         </linkerTool>
@@ -391,6 +387,8 @@
       </item>
       <item path="Game-SRC/SOIL/stbi_DDS_aug_c.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Game-SRC/Sound.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="Game-SRC/StateController.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Game-SRC/StateController.h" ex="false" tool="3" flavor2="0">
@@ -445,6 +443,7 @@
             <linkerLibLibItem>SOIL</linkerLibLibItem>
             <linkerLibLibItem>opengl32</linkerLibLibItem>
             <linkerLibLibItem>m</linkerLibLibItem>
+            <linkerLibLibItem>fmod</linkerLibLibItem>
           </linkerLibItems>
           <commandLine>-Wall -g</commandLine>
         </linkerTool>
@@ -502,6 +501,8 @@
       <item path="Game-SRC/SOIL/stbi_DDS_aug.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Game-SRC/SOIL/stbi_DDS_aug_c.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Game-SRC/Sound.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Game-SRC/StateController.c" ex="false" tool="0" flavor2="0">
       </item>

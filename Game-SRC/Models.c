@@ -1,4 +1,5 @@
 #include "Geral.h"
+#include "GLM/glm.h"
 
 #define QUANTIDADE_OBJETOS3D 3 // Quantidade total de objetos 3D que sao carregados
 
