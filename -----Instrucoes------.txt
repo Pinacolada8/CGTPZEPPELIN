@@ -12,8 +12,8 @@
 
 -> Utilizando o arquivo BAT ------------>>Windows-> Apos Utilizar o BAT, o arquivo compilado estara na pasta raiz, como START.EXE
 
--> Comando para compilar Manualmente --->>Windows-> gcc -o Start Game-SRC/*.c Game-SRC/SOIL/*.c Game-SRC/GLM/*.c Game-SRC/FMOD/*.c -lfreeglut -lglu32 -lglew32 -lSOIL -lopengl32 -lm -lfmod
-   "   "   "   "   "   "   "   "   " --->>Linux  -> gcc -o Start Game-SRC/*.c Game-SRC/SOIL/*.c Game-SRC/GLM/*.c Game-SRC/FMOD/*.c -lglut -lGLU -lGLEW -lSOIL -lGL -lm -lfmod
+-> Comando para compilar Manualmente --->>Windows-> gcc -o Start Game-SRC/*.c Game-SRC/SOIL/*.c Game-SRC/GLM/*.c -lfreeglut -lglu32 -lglew32 -lSOIL -lopengl32 -lm -lfmod
+   "   "   "   "   "   "   "   "   " --->>Linux  -> gcc -o Start Game-SRC/*.c Game-SRC/SOIL/*.c Game-SRC/GLM/*.c -lglut -lGLU -lGLEW -lSOIL -lGL -lm -lfmod
 
 
 --------------------------------------
