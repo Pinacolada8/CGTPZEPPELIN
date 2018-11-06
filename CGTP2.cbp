@@ -59,6 +59,14 @@
 		<Unit filename="Game-SRC/Desenhos.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Game-SRC/FMOD/fmod.h" />
+		<Unit filename="Game-SRC/FMOD/fmod.hpp" />
+		<Unit filename="Game-SRC/FMOD/fmod_codec.h" />
+		<Unit filename="Game-SRC/FMOD/fmod_common.h" />
+		<Unit filename="Game-SRC/FMOD/fmod_dsp.h" />
+		<Unit filename="Game-SRC/FMOD/fmod_dsp_effects.h" />
+		<Unit filename="Game-SRC/FMOD/fmod_errors.h" />
+		<Unit filename="Game-SRC/FMOD/fmod_output.h" />
 		<Unit filename="Game-SRC/GLM/glm.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -114,6 +122,9 @@
 		<Unit filename="Game-SRC/SOIL/stb_image_aug.h" />
 		<Unit filename="Game-SRC/SOIL/stbi_DDS_aug.h" />
 		<Unit filename="Game-SRC/SOIL/stbi_DDS_aug_c.h" />
+		<Unit filename="Game-SRC/Sound.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Game-SRC/StateController.c">
 			<Option compilerVar="CC" />
 		</Unit>
