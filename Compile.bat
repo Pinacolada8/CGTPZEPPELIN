@@ -6,7 +6,7 @@ ECHO Compilando...
 
 SET Arquivos=Game-SRC/*.c Game-SRC/SOIL/*.c Game-SRC/GLM/*.c
 
-gcc -o Start %Arquivos% -lfreeglut -lglu32 -lglew32 -lSOIL -lopengl32 -lm -lfmod
+gcc -o Start %Arquivos% -lfreeglut -lglu32 -lglew32 -lSOIL -lopengl32 -lm
 
 ECHO FIM(COMPILADO)
 pause
