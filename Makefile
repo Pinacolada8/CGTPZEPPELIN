@@ -140,7 +140,7 @@ help: .help-post
 # Add your post 'help' code here...
 
 run: clean build
-	exec ${CND_DISTDIR}/${CONF}/Start
+	${CND_DISTDIR}/${CONF}/Start
 
 # include project implementation makefile
 include nbproject/Makefile-impl.mk
