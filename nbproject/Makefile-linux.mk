@@ -35,28 +35,36 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/Game-SRC/Cannon.o \
+	${OBJECTDIR}/Game-SRC/Cameras.o \
 	${OBJECTDIR}/Game-SRC/Desenhos.o \
+	${OBJECTDIR}/Game-SRC/GLM/glm.o \
+	${OBJECTDIR}/Game-SRC/GLM/glm_util.o \
+	${OBJECTDIR}/Game-SRC/GLM/glmimg.o \
 	${OBJECTDIR}/Game-SRC/GameLogic.o \
 	${OBJECTDIR}/Game-SRC/InGameMenu.o \
 	${OBJECTDIR}/Game-SRC/Inputs.o \
+	${OBJECTDIR}/Game-SRC/Lights.o \
+	${OBJECTDIR}/Game-SRC/Models.o \
 	${OBJECTDIR}/Game-SRC/Objects.o \
-	${OBJECTDIR}/Game-SRC/Obstacles.o \
 	${OBJECTDIR}/Game-SRC/Physics.o \
 	${OBJECTDIR}/Game-SRC/Player.o \
-	${OBJECTDIR}/Game-SRC/PowerUp_invulnerability.o \
-	${OBJECTDIR}/Game-SRC/Scenario.o \
-	${OBJECTDIR}/Game-SRC/Scores.o \
+	${OBJECTDIR}/Game-SRC/SOIL/SOIL.o \
+	${OBJECTDIR}/Game-SRC/SOIL/image_DXT.o \
+	${OBJECTDIR}/Game-SRC/SOIL/image_helper.o \
+	${OBJECTDIR}/Game-SRC/SOIL/stb_image_aug.o \
+	${OBJECTDIR}/Game-SRC/Sound.o \
 	${OBJECTDIR}/Game-SRC/StateController.o \
 	${OBJECTDIR}/Game-SRC/StateCredits.o \
 	${OBJECTDIR}/Game-SRC/StateGame.o \
 	${OBJECTDIR}/Game-SRC/StateInGameMenu.o \
+	${OBJECTDIR}/Game-SRC/StateLoading.o \
 	${OBJECTDIR}/Game-SRC/StateMenu.o \
 	${OBJECTDIR}/Game-SRC/StateOption.o \
 	${OBJECTDIR}/Game-SRC/Texto.o \
 	${OBJECTDIR}/Game-SRC/Textures.o \
 	${OBJECTDIR}/Game-SRC/Timer.o \
 	${OBJECTDIR}/Game-SRC/Wait.o \
+	${OBJECTDIR}/Game-SRC/Window.o \
 	${OBJECTDIR}/Game-SRC/main.o
 
 
@@ -74,7 +82,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-LGameResources/Lib -lglut -lGLU -lGLEW -lSOIL -lGL -lm
+LDLIBSOPTIONS=-LGameResources/Lib -Wl,-rpath,'GameResources/Lib' -lglut -lGLU -lGLEW -lSOIL -lGL -lm -lfmod
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -84,15 +92,30 @@ ${CND_DISTDIR}/${CND_CONF}/Start: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/Start ${OBJECTFILES} ${LDLIBSOPTIONS} -g -Wall
 
-${OBJECTDIR}/Game-SRC/Cannon.o: Game-SRC/Cannon.c
+${OBJECTDIR}/Game-SRC/Cameras.o: Game-SRC/Cameras.c
 	${MKDIR} -p ${OBJECTDIR}/Game-SRC
 	${RM} "$@.d"
-	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/Cannon.o Game-SRC/Cannon.c
+	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/Cameras.o Game-SRC/Cameras.c
 
 ${OBJECTDIR}/Game-SRC/Desenhos.o: Game-SRC/Desenhos.c
 	${MKDIR} -p ${OBJECTDIR}/Game-SRC
 	${RM} "$@.d"
 	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/Desenhos.o Game-SRC/Desenhos.c
+
+${OBJECTDIR}/Game-SRC/GLM/glm.o: Game-SRC/GLM/glm.c
+	${MKDIR} -p ${OBJECTDIR}/Game-SRC/GLM
+	${RM} "$@.d"
+	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/GLM/glm.o Game-SRC/GLM/glm.c
+
+${OBJECTDIR}/Game-SRC/GLM/glm_util.o: Game-SRC/GLM/glm_util.c
+	${MKDIR} -p ${OBJECTDIR}/Game-SRC/GLM
+	${RM} "$@.d"
+	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/GLM/glm_util.o Game-SRC/GLM/glm_util.c
+
+${OBJECTDIR}/Game-SRC/GLM/glmimg.o: Game-SRC/GLM/glmimg.c
+	${MKDIR} -p ${OBJECTDIR}/Game-SRC/GLM
+	${RM} "$@.d"
+	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/GLM/glmimg.o Game-SRC/GLM/glmimg.c
 
 ${OBJECTDIR}/Game-SRC/GameLogic.o: Game-SRC/GameLogic.c
 	${MKDIR} -p ${OBJECTDIR}/Game-SRC
@@ -109,15 +132,20 @@ ${OBJECTDIR}/Game-SRC/Inputs.o: Game-SRC/Inputs.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/Inputs.o Game-SRC/Inputs.c
 
+${OBJECTDIR}/Game-SRC/Lights.o: Game-SRC/Lights.c
+	${MKDIR} -p ${OBJECTDIR}/Game-SRC
+	${RM} "$@.d"
+	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/Lights.o Game-SRC/Lights.c
+
+${OBJECTDIR}/Game-SRC/Models.o: Game-SRC/Models.c
+	${MKDIR} -p ${OBJECTDIR}/Game-SRC
+	${RM} "$@.d"
+	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/Models.o Game-SRC/Models.c
+
 ${OBJECTDIR}/Game-SRC/Objects.o: Game-SRC/Objects.c
 	${MKDIR} -p ${OBJECTDIR}/Game-SRC
 	${RM} "$@.d"
 	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/Objects.o Game-SRC/Objects.c
-
-${OBJECTDIR}/Game-SRC/Obstacles.o: Game-SRC/Obstacles.c
-	${MKDIR} -p ${OBJECTDIR}/Game-SRC
-	${RM} "$@.d"
-	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/Obstacles.o Game-SRC/Obstacles.c
 
 ${OBJECTDIR}/Game-SRC/Physics.o: Game-SRC/Physics.c
 	${MKDIR} -p ${OBJECTDIR}/Game-SRC
@@ -129,20 +157,30 @@ ${OBJECTDIR}/Game-SRC/Player.o: Game-SRC/Player.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/Player.o Game-SRC/Player.c
 
-${OBJECTDIR}/Game-SRC/PowerUp_invulnerability.o: Game-SRC/PowerUp_invulnerability.c
-	${MKDIR} -p ${OBJECTDIR}/Game-SRC
+${OBJECTDIR}/Game-SRC/SOIL/SOIL.o: Game-SRC/SOIL/SOIL.c
+	${MKDIR} -p ${OBJECTDIR}/Game-SRC/SOIL
 	${RM} "$@.d"
-	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/PowerUp_invulnerability.o Game-SRC/PowerUp_invulnerability.c
+	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/SOIL/SOIL.o Game-SRC/SOIL/SOIL.c
 
-${OBJECTDIR}/Game-SRC/Scenario.o: Game-SRC/Scenario.c
-	${MKDIR} -p ${OBJECTDIR}/Game-SRC
+${OBJECTDIR}/Game-SRC/SOIL/image_DXT.o: Game-SRC/SOIL/image_DXT.c
+	${MKDIR} -p ${OBJECTDIR}/Game-SRC/SOIL
 	${RM} "$@.d"
-	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/Scenario.o Game-SRC/Scenario.c
+	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/SOIL/image_DXT.o Game-SRC/SOIL/image_DXT.c
 
-${OBJECTDIR}/Game-SRC/Scores.o: Game-SRC/Scores.c
+${OBJECTDIR}/Game-SRC/SOIL/image_helper.o: Game-SRC/SOIL/image_helper.c
+	${MKDIR} -p ${OBJECTDIR}/Game-SRC/SOIL
+	${RM} "$@.d"
+	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/SOIL/image_helper.o Game-SRC/SOIL/image_helper.c
+
+${OBJECTDIR}/Game-SRC/SOIL/stb_image_aug.o: Game-SRC/SOIL/stb_image_aug.c
+	${MKDIR} -p ${OBJECTDIR}/Game-SRC/SOIL
+	${RM} "$@.d"
+	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/SOIL/stb_image_aug.o Game-SRC/SOIL/stb_image_aug.c
+
+${OBJECTDIR}/Game-SRC/Sound.o: Game-SRC/Sound.c
 	${MKDIR} -p ${OBJECTDIR}/Game-SRC
 	${RM} "$@.d"
-	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/Scores.o Game-SRC/Scores.c
+	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/Sound.o Game-SRC/Sound.c
 
 ${OBJECTDIR}/Game-SRC/StateController.o: Game-SRC/StateController.c
 	${MKDIR} -p ${OBJECTDIR}/Game-SRC
@@ -163,6 +201,11 @@ ${OBJECTDIR}/Game-SRC/StateInGameMenu.o: Game-SRC/StateInGameMenu.c
 	${MKDIR} -p ${OBJECTDIR}/Game-SRC
 	${RM} "$@.d"
 	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/StateInGameMenu.o Game-SRC/StateInGameMenu.c
+
+${OBJECTDIR}/Game-SRC/StateLoading.o: Game-SRC/StateLoading.c
+	${MKDIR} -p ${OBJECTDIR}/Game-SRC
+	${RM} "$@.d"
+	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/StateLoading.o Game-SRC/StateLoading.c
 
 ${OBJECTDIR}/Game-SRC/StateMenu.o: Game-SRC/StateMenu.c
 	${MKDIR} -p ${OBJECTDIR}/Game-SRC
@@ -193,6 +236,11 @@ ${OBJECTDIR}/Game-SRC/Wait.o: Game-SRC/Wait.c
 	${MKDIR} -p ${OBJECTDIR}/Game-SRC
 	${RM} "$@.d"
 	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/Wait.o Game-SRC/Wait.c
+
+${OBJECTDIR}/Game-SRC/Window.o: Game-SRC/Window.c
+	${MKDIR} -p ${OBJECTDIR}/Game-SRC
+	${RM} "$@.d"
+	$(COMPILE.c) -g -IGameResources/Include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game-SRC/Window.o Game-SRC/Window.c
 
 ${OBJECTDIR}/Game-SRC/main.o: Game-SRC/main.c
 	${MKDIR} -p ${OBJECTDIR}/Game-SRC
