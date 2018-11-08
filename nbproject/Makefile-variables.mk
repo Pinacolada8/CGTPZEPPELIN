@@ -28,8 +28,8 @@ CND_ARTIFACT_DIR_linux=dist/linux
 CND_ARTIFACT_NAME_linux=Start
 CND_ARTIFACT_PATH_linux=dist/linux/Start
 CND_PACKAGE_DIR_linux=dist/linux/GNU-Linux/package
-CND_PACKAGE_NAME_linux=cgtp1.tar
-CND_PACKAGE_PATH_linux=dist/linux/GNU-Linux/package/cgtp1.tar
+CND_PACKAGE_NAME_linux=cgtpzeppelin.tar
+CND_PACKAGE_PATH_linux=dist/linux/GNU-Linux/package/cgtpzeppelin.tar
 # Windows configuration
 CND_PLATFORM_Windows=MinGW-Windows
 CND_ARTIFACT_DIR_Windows=dist/Windows

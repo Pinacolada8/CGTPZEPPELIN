@@ -327,6 +327,9 @@
           <linkerAddLib>
             <pElem>GameResources/Lib</pElem>
           </linkerAddLib>
+          <linkerDynSerch>
+            <pElem>GameResources/Lib</pElem>
+          </linkerDynSerch>
           <linkerLibItems>
             <linkerOptionItem>-lglut -lGLU -lGLEW -lSOIL -lGL -lm -lfmod</linkerOptionItem>
           </linkerLibItems>
