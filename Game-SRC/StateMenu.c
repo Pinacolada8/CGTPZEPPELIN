@@ -36,12 +36,13 @@ void drawMenu(void) {
     
 }
 
-void selectMenuState(){     
+void selectMenuState(){
     glutDisplayFunc(drawMenu);
     glutKeyboardFunc(NULL);
     glutKeyboardUpFunc(NULL);
     glutSpecialFunc(NULL);
     glutSpecialUpFunc(NULL);
     glutMouseFunc(MenuMouse);
+    playSound(0, 0);
 }
 

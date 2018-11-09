@@ -125,6 +125,10 @@ void load_allTextures ();
 //Models
 void load_allModels ();
 void makeLists();
+//Sounds
+void initSoundSystem();
+void load_allSounds();
+void playSound(int soundID, FMOD_BOOL isPaused);
 //Objects
 void initPlayer(PlayerObject * o, void (*d)(float x, float y, float z,GLuint idText));
 //Player
@@ -168,6 +172,7 @@ extern GLuint * playerRunTex;
 //Models
 extern GLMmodel ** models;
 extern GLuint modelLists[];
+//Sounds
 //GameLogic
 extern float const tickFreq;
 extern float rotationUFO;

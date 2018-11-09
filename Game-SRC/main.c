@@ -58,7 +58,9 @@ int main(int argc, char** argv) {
     
     //Iniciando o jogo    
     configura3D();
-    load_allTextures();    
+    initSoundSystem();
+    load_allTextures();
+    load_allSounds();
     selectState(MenuState); 
     
     glutMainLoop();

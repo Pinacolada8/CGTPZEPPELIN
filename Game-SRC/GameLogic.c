@@ -50,6 +50,7 @@ void loadGame(){
     loadPlayer(PLAYER_STARTPOSX,PLAYER_STARTPOSY,PLAYER_STARTPOSZ,PLAYER_STARTANGLE,(float*)DefaultColor,CAMERA_QTDE,cameras, NULL);//ALTERAR
     configuraLights();
     configuraFog();
+    playSound(1, 0);
     endPause();
 }
 
