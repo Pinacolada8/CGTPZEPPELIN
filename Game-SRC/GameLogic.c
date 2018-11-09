@@ -28,6 +28,7 @@ void fPause(){
 void startPause(){
     pause = True;
     pauseTimer();
+    playSound(1,1);
 }
 
 void endPause(){
@@ -35,6 +36,7 @@ void endPause(){
         pause = False;
         startTimer();
         tick(pause);
+        playSound(1,0);
     }
 }
 
@@ -57,8 +59,7 @@ void loadGame(){
 
 void endGame(){
     startPause();    
-    resetTimer();
-    playSound(1,1);
+    resetTimer();    
 }
 
 void restartGame(){

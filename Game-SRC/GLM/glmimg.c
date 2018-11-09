@@ -9,6 +9,9 @@
 # ifdef _WIN32
 #   include <windows.h>
 # endif
+# ifdef _WIN64
+#   include <windows.h>
+# endif
 #ifdef __APPLE__
 #include <OpenGL/gl.h>
 #include <OpenGL/glext.h>
@@ -200,7 +203,7 @@ glmLoadTexture(const char *filename, GLboolean alpha, GLboolean repeat, GLboolea
             SOIL_FLAG_INVERT_Y | SOIL_FLAG_MIPMAPS
             );
     
-
+    
     if (id == 0) {
         printf("Erro carregando textura: '%s'\n", SOIL_last_result());
     }

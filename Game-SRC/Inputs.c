@@ -93,8 +93,12 @@ void teclado(unsigned char key, int x, int y) {
         case 'N':
         case 'n':
             if (masterLight == GL_LIGHT0){
+                glDisable(GL_LIGHT1);
+                glEnable(GL_LIGHT0);
                 masterLight = GL_LIGHT1;//Altera para a luz da lua
             }else{
+                glDisable(GL_LIGHT0);
+                glEnable(GL_LIGHT1);
                 masterLight = GL_LIGHT0;//Altera para a luz do sol
             }
             break;          

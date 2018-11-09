@@ -9,6 +9,7 @@ const char * pathsModels [] = {//Local das texturas
     "GameResources/Models/UFO/UFO.obj",                 // 0 -- Modelo do OVNI
     "GameResources/Models/Alien/Alien.obj",               // 1 -- Modelo da Cidade(Base)
     "GameResources/Models/TheCity/TheCity.obj",         // 2 -- Modelo da Cidade(Base)
+    //"GameResources/Models/Tropical_Islands/TropicalIslands.obj",// Cidade Com Problema
     //"GameResources/Models/Sirus5ColonialCity/sirus_city.obj",//Outra Cidade pesada
     //"GameResources/Models/CasteliaCity/CasteliaCity.obj",  //Cidade MUITO(MUITO MESMO) pesada, FPS extremamente baixo
     
@@ -26,7 +27,7 @@ GLMmodel * load_model(const char path[]) {
         pmodel = glmReadOBJ(path);
         if (!pmodel) {
             printf("\nFalha no carregamento do modelo.");
-        }
+        }        
         glmUnitize(pmodel);
         glmVertexNormals(pmodel, 90.0, GL_TRUE);
     }
@@ -37,7 +38,7 @@ void load_allModels (){
     int i;
     models = malloc(QUANTIDADE_OBJETOS3D * sizeof(GLMmodel*));
     for (i=0;i<QUANTIDADE_OBJETOS3D;i++){      
-        models[i] = load_model(pathsModels[i]);        
+        models[i] = load_model(pathsModels[i]);   
     }    
 }
 

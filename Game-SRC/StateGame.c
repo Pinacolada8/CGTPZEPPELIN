@@ -28,7 +28,7 @@ void drawGame(void) {
     if (lightON){ //Liga o esquema de iluminacao
         glEnable(GL_LIGHTING);
     }
-    glEnable(masterLight);
+    glEnable(masterLight);    
     
     //ObjetoPrincipal~start
     drawUFO(&models[0],rotationUFO);
@@ -37,18 +37,22 @@ void drawGame(void) {
     //Cenario~start    //ALTERAR
     glPushMatrix();
     //Movendo o cenario em relacao ao objeto principal    
-    glRotatef(player.rotationAngle,0,1,0);
-    glTranslatef(player.x,-player.y,-player.z);      
-    glLightfv(masterLight,GL_POSITION,masterLightPos); //Luz Principal (SOL ou LUA)   
-    glColor4f(1,1,1,1);
-    glPushMatrix();    
-    glScalef(CITY_SCALEMULTIPLAYER,CITY_SCALEMULTIPLAYER,CITY_SCALEMULTIPLAYER);
-    glCallList(modelLists[2]);
+        glRotatef(player.rotationAngle,0,1,0);
+        glTranslatef(player.x,-player.y,-player.z);      
+        glLightfv(masterLight,GL_POSITION,masterLightPos); //Luz Principal (SOL ou LUA)   
+        glColor4f(1,1,1,1);
+        glPushMatrix();    
+            glScalef(CITY_SCALEMULTIPLAYER,CITY_SCALEMULTIPLAYER,CITY_SCALEMULTIPLAYER);
+            glCallList(modelLists[2]);
+            glPushMatrix();
+                glTranslatef(0,0,1.8);
+                glScalef(1,1,-1);
+                glCallList(modelLists[2]);
+            glPopMatrix();            
+        glPopMatrix();
     glPopMatrix();
-    glPopMatrix();
-    //end~Cenario
+    //end~Cenario    
     
-    glDisable(masterLight);
     glDisable(GL_LIGHTING);
     
     drawRelogio(TIMER_POSX,TIMER_POSY,getTimer());    

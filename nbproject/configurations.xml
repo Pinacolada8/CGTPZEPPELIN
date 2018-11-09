@@ -423,7 +423,7 @@
     </conf>
     <conf name="Windows" type="1" platformSpecific="true">
       <toolsSet>
-        <compilerSet>MinGW|MinGW</compilerSet>
+        <compilerSet>default</compilerSet>
         <platform>3</platform>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
