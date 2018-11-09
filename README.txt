@@ -13,12 +13,14 @@
 	-BASICO (COMPLETO)
 	-SKYBOX
 	-FORMATO OBJ (Carregado com textura e material)
-	-FOG
-	-CAMERA 2 PODE ALTERAR OLHAR PARA CIMA E PARA BAIXO
+	-FOG (Letra 'F' ativa/desativa)
+	-A CAMERA 2 PODE ALTERAR OLHAR PARA CIMA E PARA BAIXO ('+' e '-' para olhar)
 	-MENU COMPLETO
 	-TELA DE LOADING (Carregamento dos OBJs)
 	-UTILIZADO DISPLAY LIST (Teve um maior desempenho que VBOs)
 	-HUD DE COORDENADAS E ROTAÇÃO (Plano 2d em frente a tela)
 	-HUD TIMER (Representa um timer no tempo que passou dentro do jogo, representado em hud)
 	-IN-GAME-MENU (Menu ingame ao apertar a tecla ESC, permitindo voltar ao menu, continuar no game, ou sair do jogo)
+	-MUSICA DE MENU & INGAME (Musica diferente no menu e no jogo) (Letra 'M' Muta)
+	-NOITE/DIA (Letra 'N' troca)
 		<-

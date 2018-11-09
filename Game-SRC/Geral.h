@@ -129,6 +129,7 @@ void makeLists();
 void initSoundSystem();
 void load_allSounds();
 void playSound(int soundID, FMOD_BOOL isPaused);
+void muteGame();
 //Objects
 void initPlayer(PlayerObject * o, void (*d)(float x, float y, float z,GLuint idText));
 //Player

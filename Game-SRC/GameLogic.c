@@ -50,14 +50,15 @@ void loadGame(){
     loadPlayer(PLAYER_STARTPOSX,PLAYER_STARTPOSY,PLAYER_STARTPOSZ,PLAYER_STARTANGLE,(float*)DefaultColor,CAMERA_QTDE,cameras, NULL);//ALTERAR
     configuraLights();
     configuraFog();
-    playSound(1, 0);
+    playSound(0,1);//Pausa a musica do menu
+    playSound(1, 0);//Comeca a musica do Game
     endPause();
 }
 
 void endGame(){
-    startPause();
-
+    startPause();    
     resetTimer();
+    playSound(1,1);
 }
 
 void restartGame(){

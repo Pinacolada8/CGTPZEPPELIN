@@ -97,7 +97,12 @@ void teclado(unsigned char key, int x, int y) {
             }else{
                 masterLight = GL_LIGHT0;//Altera para a luz do sol
             }
-            break;            
+            break;          
+            
+        case 'm':
+        case 'M':
+            muteGame();
+            break;
             
         default:
             break;
