@@ -28,7 +28,7 @@ void drawCreditsScreen(void) {
 
 void selectCreditsState(){
     glutDisplayFunc(drawCreditsScreen);
-    glutKeyboardFunc(NULL);
+    glutKeyboardFunc(tecladoMenu);
     glutKeyboardUpFunc(NULL);
     glutSpecialFunc(NULL);
     glutSpecialUpFunc(NULL);

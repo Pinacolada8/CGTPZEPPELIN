@@ -11,7 +11,8 @@
 
 -> Implementações:
 	-BASICO (COMPLETO)
-	-SKYBOX
+	-NOITE/DIA (Letra 'N' troca)
+	-SKYBOX (Dia & Noite)
 	-FORMATO OBJ (Carregado com textura e material)
 	-FOG (Letra 'F' ativa/desativa)
 	-A CAMERA 2 PODE ALTERAR OLHAR PARA CIMA E PARA BAIXO ('+' e '-' para olhar)
@@ -21,6 +22,6 @@
 	-HUD DE COORDENADAS E ROTAÇÃO (Plano 2d em frente a tela)
 	-HUD TIMER (Representa um timer no tempo que passou dentro do jogo, representado em hud)
 	-IN-GAME-MENU (Menu ingame ao apertar a tecla ESC, permitindo voltar ao menu, continuar no game, ou sair do jogo)
-	-MUSICA DE MENU & INGAME (Musica diferente no menu e no jogo) (Letra 'M' Muta)
-	-NOITE/DIA (Letra 'N' troca)
+	-MUSICA DE MENU & INGAME (Musica diferente no menu e no jogo) (Letra 'M' Muta)	
+	-BOOST DE VELOCIDADE (Aperte e segure 'shift' antes de comecar a se mover, para se mover mais rapido)
 		<-

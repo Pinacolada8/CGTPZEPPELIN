@@ -10,6 +10,7 @@ const float DefaultColor[] = {1,1,1,1};
 bool lightON = True;
 bool fogON = False;
 GLenum masterLight = GL_LIGHT0;
+GLuint * currentSkyBox;
 
 float rotationUFO = 0;
 
@@ -44,13 +45,18 @@ void loadTimer(){//Inicia o timer do jogo
     initTimer();
 }
 
-void loadGame(){    
+void loadGame(){      
     srand(time(NULL));
     pause = True;
     loadTimer();
     startCameras();
     loadPlayer(PLAYER_STARTPOSX,PLAYER_STARTPOSY,PLAYER_STARTPOSZ,PLAYER_STARTANGLE,(float*)DefaultColor,CAMERA_QTDE,cameras, NULL);//ALTERAR
     configuraLights();
+    //Garantindo que o jogo incie como dia
+    currentSkyBox = TexturaSkyBoxDia;
+    glDisable(GL_LIGHT1);
+    masterLight = GL_LIGHT0;
+    //Fim do dia
     configuraFog();
     playSound(0,1);//Pausa a musica do menu
     playSound(1, 0);//Comeca a musica do Game

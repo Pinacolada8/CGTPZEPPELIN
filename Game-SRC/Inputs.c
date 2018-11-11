@@ -6,7 +6,9 @@
 
 //Controla todo o input do jogo
 
-void teclado(unsigned char key, int x, int y) {
+void teclado(unsigned char key, int x, int y) {    
+    fowardBoost = glutGetModifiers() == GLUT_ACTIVE_SHIFT;
+    
     switch (key) {
         // Tecla ESC
         case 27:
@@ -93,13 +95,15 @@ void teclado(unsigned char key, int x, int y) {
         case 'N':
         case 'n':
             if (masterLight == GL_LIGHT0){
-                glDisable(GL_LIGHT1);
-                glEnable(GL_LIGHT0);
-                masterLight = GL_LIGHT1;//Altera para a luz da lua
-            }else{
                 glDisable(GL_LIGHT0);
                 glEnable(GL_LIGHT1);
+                masterLight = GL_LIGHT1;//Altera para a luz da lua
+                currentSkyBox = TexturaSkyBoxNoite; //Coloca a skybox da noite
+            }else{
+                glDisable(GL_LIGHT1);
+                glEnable(GL_LIGHT0);
                 masterLight = GL_LIGHT0;//Altera para a luz do sol
+                currentSkyBox = TexturaSkyBoxDia; //Coloca a skybox do dia
             }
             break;          
             

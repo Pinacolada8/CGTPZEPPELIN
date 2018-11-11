@@ -12,3 +12,4 @@ void selectLoadingState();
 //Auxiliar Prototypes
 void drawGame(void);
 void showMenuMouse(int button, int state,int x, int y);
+void tecladoMenu(unsigned char key, int x, int y);

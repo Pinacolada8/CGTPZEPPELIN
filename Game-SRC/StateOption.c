@@ -67,7 +67,7 @@ void drawOptionsScreen(void) {
 
 void selectOptionState(){
     glutDisplayFunc(drawOptionsScreen);
-    glutKeyboardFunc(NULL);
+    glutKeyboardFunc(tecladoMenu);
     glutKeyboardUpFunc(NULL);
     glutSpecialFunc(NULL);
     glutSpecialUpFunc(NULL);

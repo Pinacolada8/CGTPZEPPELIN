@@ -8,7 +8,7 @@ void configura3D(){
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     
-    gluPerspective(FOV_DEFAULT, ASPECT_RATIO, 1, VIEW_DISTANCE);
+    gluPerspective(FOV_DEFAULT, ASPECT_RATIO, 1,VIEW_DISTANCE);
     
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();

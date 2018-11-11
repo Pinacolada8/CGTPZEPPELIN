@@ -21,7 +21,7 @@ void drawLoadingScreen(void) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glEnable(GL_TEXTURE_2D);
     
-    drawFullScreen(texturas[6]);
+    drawFullScreen(texturas[5]);
     
     glDisable(GL_TEXTURE_2D); 
     glutSwapBuffers();
@@ -35,7 +35,7 @@ void drawLoadingScreen(void) {
 
 void selectLoadingState(){
     glutDisplayFunc(drawLoadingScreen);
-    glutKeyboardFunc(NULL);
+    glutKeyboardFunc(tecladoMenu);
     glutKeyboardUpFunc(NULL);
     glutSpecialFunc(NULL);
     glutSpecialUpFunc(NULL);

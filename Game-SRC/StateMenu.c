@@ -36,9 +36,21 @@ void drawMenu(void) {
     
 }
 
+void tecladoMenu(unsigned char key, int x, int y) {
+    switch (key) {        
+        case 'm':
+        case 'M':
+            muteGame();
+            break;
+            
+        default:
+            break;
+    }
+}
+
 void selectMenuState(){
     glutDisplayFunc(drawMenu);
-    glutKeyboardFunc(NULL);
+    glutKeyboardFunc(tecladoMenu);
     glutKeyboardUpFunc(NULL);
     glutSpecialFunc(NULL);
     glutSpecialUpFunc(NULL);

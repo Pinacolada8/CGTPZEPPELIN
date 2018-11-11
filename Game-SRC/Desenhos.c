@@ -134,7 +134,56 @@ void drawUFO(GLMmodel ** model, float rotation){
     glPopMatrix();
 }
 
-void drawSkyBox(int skyBoxDistance,GLuint idText){
+void texturedSquare(GLuint idText){
+    glBindTexture(GL_TEXTURE_2D, idText);
+    glColor4f(1,1,1,1);
+    glBegin(GL_TRIANGLE_FAN);
+        glTexCoord2f(0,0);glVertex3f(-1,-1,0);
+        glTexCoord2f(1,0);glVertex3f(1,-1,0);
+        glTexCoord2f(1,1);glVertex3f(1,1,0);
+        glTexCoord2f(0,1);glVertex3f(-1,1,0);
+    glEnd();
+}
+
+void drawSkyBox(int skyBoxDistance,GLuint *idText){
+    glPushMatrix();      
+        glScalef(skyBoxDistance,skyBoxDistance,skyBoxDistance);
+        glTranslatef(0,-0.2,0);
+        glPushMatrix(); //Front
+            glTranslatef(0,0,1);    
+            glRotatef(180,0,1,0);
+            texturedSquare(idText[0]);
+        glPopMatrix();
+        glPushMatrix(); //Back
+            glTranslatef(0,0,-1);            
+            texturedSquare(idText[1]);
+        glPopMatrix();
+        glPushMatrix(); //Right
+            glTranslatef(1,0,0);
+            glRotatef(-90,0,1,0);
+            texturedSquare(idText[2]);
+        glPopMatrix();
+        glPushMatrix(); //Left
+            glTranslatef(-1,0,0);
+            glRotatef(90,0,1,0);
+            texturedSquare(idText[3]);
+        glPopMatrix();        
+        glPushMatrix(); //Up
+            glTranslatef(0,1,0);
+            glRotatef(-90,0,1,0);
+            glRotatef(90,1,0,0);            
+            texturedSquare(idText[4]);
+        glPopMatrix();
+        glPushMatrix(); //Down
+            glTranslatef(0,-1,0);
+            glRotatef(-90,0,1,0);
+            glRotatef(-90,1,0,0);
+            texturedSquare(idText[5]);
+        glPopMatrix();
+    glPopMatrix();
+}
+
+/*void drawSkyBox(int skyBoxDistance,GLuint idText){ //OLD CODE
     glPushMatrix();
     glScalef(skyBoxDistance,skyBoxDistance,skyBoxDistance);
     glBindTexture(GL_TEXTURE_2D, idText); 
@@ -177,8 +226,51 @@ void drawSkyBox(int skyBoxDistance,GLuint idText){
     glEnd();  
     glPopMatrix();
     
+}*/
+
+void drawCity(){
+    int i,j;
+    glPushMatrix();
+    //Movendo o cenario em relacao ao objeto principal    
+        glRotatef(player.rotationAngle,0,1,0);
+        glTranslatef(player.x,-player.y,-player.z);      
+        glLightfv(masterLight,GL_POSITION,masterLightPos); //Luz Principal (SOL ou LUA)   
+        glColor4f(1,1,1,1);
+        glPushMatrix();    
+            glScalef(CITY_SCALEMULTIPLAYER,CITY_SCALEMULTIPLAYER,CITY_SCALEMULTIPLAYER);
+            glTranslatef(-(CITY_BLOCK_QTDE/2)*CITY_BLOCK_SEPARATION,0,-(CITY_BLOCK_QTDE/2)*CITY_BLOCK_SEPARATION);
+            for(i = 0;i<CITY_BLOCK_QTDE;i++){
+                glPushMatrix();
+                for (j=0;j<CITY_BLOCK_QTDE;j++){
+                    glPushMatrix();
+                        glRotatef(((i*j)%4)*90,0,1,0);//Gera uma rotacao para os blocos de cidade
+                        glCallList(modelLists[2]);
+                    glPopMatrix();
+                    glTranslatef(CITY_BLOCK_SEPARATION,0,0);
+                }
+                glPopMatrix();
+                glTranslatef(0,0,CITY_BLOCK_SEPARATION);
+            } 
+        glPopMatrix();
+    glPopMatrix();    
 }
 
-
-
+/*void drawCity(){ //OLD CODE
+    glPushMatrix();
+    //Movendo o cenario em relacao ao objeto principal    
+        glRotatef(player.rotationAngle,0,1,0);
+        glTranslatef(player.x,-player.y,-player.z);      
+        glLightfv(masterLight,GL_POSITION,masterLightPos); //Luz Principal (SOL ou LUA)   
+        glColor4f(1,1,1,1);
+        glPushMatrix();    
+            glScalef(CITY_SCALEMULTIPLAYER,CITY_SCALEMULTIPLAYER,CITY_SCALEMULTIPLAYER);
+            glCallList(modelLists[2]);
+            glPushMatrix();
+                glTranslatef(0,0,1.8);
+                glScalef(1,1,-1);
+                glCallList(modelLists[2]);
+            glPopMatrix();            
+        glPopMatrix();
+    glPopMatrix();    
+}*/
 

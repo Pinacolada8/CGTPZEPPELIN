@@ -20,8 +20,8 @@ void drawGame(void) {
     
     //SkyBox~start
     glPushMatrix();
-    glRotatef(player.rotationAngle,0,1,0);
-    drawSkyBox(VIEW_DISTANCE,texturas[5]);
+        glRotatef(player.rotationAngle,0,1,0);
+        drawSkyBox(VIEW_DISTANCE/1.8,currentSkyBox);
     glPopMatrix();
     //end~SkyBox
     
@@ -34,23 +34,8 @@ void drawGame(void) {
     drawUFO(&models[0],rotationUFO);
     //end~ObjetoPrincipal
     
-    //Cenario~start    //ALTERAR
-    glPushMatrix();
-    //Movendo o cenario em relacao ao objeto principal    
-        glRotatef(player.rotationAngle,0,1,0);
-        glTranslatef(player.x,-player.y,-player.z);      
-        glLightfv(masterLight,GL_POSITION,masterLightPos); //Luz Principal (SOL ou LUA)   
-        glColor4f(1,1,1,1);
-        glPushMatrix();    
-            glScalef(CITY_SCALEMULTIPLAYER,CITY_SCALEMULTIPLAYER,CITY_SCALEMULTIPLAYER);
-            glCallList(modelLists[2]);
-            glPushMatrix();
-                glTranslatef(0,0,1.8);
-                glScalef(1,1,-1);
-                glCallList(modelLists[2]);
-            glPopMatrix();            
-        glPopMatrix();
-    glPopMatrix();
+    //Cenario~start
+    drawCity();
     //end~Cenario    
     
     glDisable(GL_LIGHTING);
