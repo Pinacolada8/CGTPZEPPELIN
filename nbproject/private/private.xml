@@ -7,10 +7,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Matheus/Google%20Drive/CG/CGTP2/Game-SRC/Models.c</file>
+            <file>file:/C:/Users/Matheus/Google%20Drive/CG/CGTP2/Game-SRC/Textures.c</file>
+            <file>file:/C:/Users/Matheus/Google%20Drive/CG/CGTP2/Game-SRC/Inputs.c</file>
             <file>file:/C:/Users/Matheus/Google%20Drive/CG/CGTP2/Game-SRC/StateGame.c</file>
-            <file>file:/C:/Users/Matheus/Google%20Drive/CG/CGTP2/Game-SRC/main.c</file>
+            <file>file:/C:/Users/Matheus/Google%20Drive/CG/CGTP2/Game-SRC/Desenhos.c</file>
+            <file>file:/C:/Users/Matheus/Google%20Drive/CG/CGTP2/Game-SRC/Physics.c</file>
             <file>file:/C:/Users/Matheus/Google%20Drive/CG/CGTP2/Game-SRC/Geral.h</file>
+            <file>file:/C:/Users/Matheus/Google%20Drive/CG/CGTP2/Game-SRC/GameLogic.c</file>
         </group>
     </open-files>
 </project-private>

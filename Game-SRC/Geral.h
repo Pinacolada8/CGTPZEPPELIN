@@ -18,7 +18,7 @@
 
 //Constantes universais
 #define ASPECT_RATIO 1.777777778 //proporcao da tela
-#define VIEW_DISTANCE 6000 // Distancia maxima da visao
+#define VIEW_DISTANCE 5000 // Distancia maxima da visao
 #define FOV_DEFAULT 60 // FOV Padrao
 #define MAX_X  1600 // Valor maximo de unidades na direcao X
 #define MAX_Y  820 // Valor maximo de unidades na direcao Y(sem contar com a profundidade do chao)
@@ -74,7 +74,7 @@
 #define CAMERA_PITCH_SPEED 0.1 //Velocidade da mudanca do pitch da camera
 
 #define CITY_SCALEMULTIPLAYER 2000 //Multiplicador para o tamanho da cidade
-#define CITY_BLOCK_QTDE 10 //Quantidade de blocos de cidade(Bairros)
+#define CITY_BLOCK_QTDE 5 //Quantidade de blocos de cidade(Bairros)
 #define CITY_BLOCK_SEPARATION 1.8 //Distancia entre os blocos de cidade
 
 #define SHOWMENU_BUTTON_WIDHT 342 //Largura dos botoes dos creditos e Highscores

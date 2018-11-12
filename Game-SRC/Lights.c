@@ -5,9 +5,10 @@
 float masterLightPos[] = {1,1,0,0};
 const float sunLightColor[] = {1,1,1,1};
 const float sunLightAmbientColor[] = {0.35,0.35,0.35,1};
-const float fogColor[] = {0.5,0.5,0.5,1};
 const float moonLightColor[] = {0.5,0.5,0.5,1};
 const float moonLightAmbientColor[] = {0.05,0.05,0.05,1};
+const float fogColor[] = {0.5,0.55,0.6,1};
+const int  fogCoord[] = {0,0,0};
 
 
 void configuraLights(){  
@@ -30,10 +31,11 @@ void configuraLights(){
 }
 
 void configuraFog(){
-    glFogi(GL_FOG_MODE, GL_EXP); // Linear, exp. ou exp²
+    glFogiv(GL_FOG_COORD_SRC, fogCoord);
+    glFogi(GL_FOG_MODE, GL_EXP2); // Linear, exp. ou exp²
     glFogfv(GL_FOG_COLOR, fogColor); // Cor
-    glFogf(GL_FOG_DENSITY, 0.0005); // Densidade
+    glFogf(GL_FOG_DENSITY, 0.001); // Densidade
     glHint(GL_FOG_HINT, GL_DONT_CARE); // Não aplicar se não puder
-    glFogf(GL_FOG_START, 2000); // Profundidade inicial
-    glFogf(GL_FOG_END,VIEW_DISTANCE); // Profundidade final      
+    glFogf(GL_FOG_START,VIEW_DISTANCE/1.2); // Profundidade inicial
+    glFogf(GL_FOG_END,VIEW_DISTANCE-10); // Profundidade final      
 }

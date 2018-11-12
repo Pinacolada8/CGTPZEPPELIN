@@ -50,7 +50,7 @@ void loadGame(){
     pause = True;
     loadTimer();
     startCameras();
-    loadPlayer(PLAYER_STARTPOSX,PLAYER_STARTPOSY,PLAYER_STARTPOSZ,PLAYER_STARTANGLE,(float*)DefaultColor,CAMERA_QTDE,cameras, NULL);//ALTERAR
+    loadPlayer(PLAYER_STARTPOSX,PLAYER_STARTPOSY,PLAYER_STARTPOSZ,PLAYER_STARTANGLE,(float*)DefaultColor,CAMERA_QTDE,cameras, NULL);
     configuraLights();
     //Garantindo que o jogo incie como dia
     currentSkyBox = TexturaSkyBoxDia;
