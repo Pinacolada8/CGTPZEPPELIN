@@ -7,7 +7,8 @@
 	Caso necessite de ajuda para instalar em linux derivados de debian olhe este site "https://wiki.debian.org/FMOD", NAO E NECESSARIO INSTALAR O FMOD STUDIO <-
 
 -> Alguns computadores utilizando linux apresentam problemas de compilação na soucecode da SOIL, caso tenha este problema utilize outro computador/sistem Operacional ou 
-	altere a importacao da soil de (#include "SOIL/SOIL.h") para (#include <SOIL/SOIL.h>), nos sequintes arquivos (Geral.h),(GLM/glmimg.c). <-
+	altere a importacao da soil de (#include "SOIL/SOIL.h") para (#include <SOIL/SOIL.h>), nos sequintes arquivos (Geral.h),(GLM/glmimg.c). 
+	Aparentemente consegui reparar este problema, mas deixo a instruçao aqui por precaução<-
 
 -> Implementações:
 	-BASICO (COMPLETO)
@@ -24,4 +25,8 @@
 	-IN-GAME-MENU (Menu ingame ao apertar a tecla ESC, permitindo voltar ao menu, continuar no game, ou sair do jogo)
 	-MUSICA DE MENU & INGAME (Musica diferente no menu e no jogo) (Letra 'M' Muta)	
 	-BOOST DE VELOCIDADE (Aperte e segure 'shift' antes de comecar a se mover, para se mover mais rapido)
+	-3 CAMERA Dentro de um CockPit (COM VIDRO!!!)
+	-3 CAMERA PODE MOVER PARA OS LADOS (->:<-(Setas do teclado) Movem a camera)
+	-VIDRO NO COCKPIT (Modelo do Cockpit ja era existente, porem foi adicionado a transparencia manualmente pelo blender)
+	-MULTIPLOS OBJTOS COMPOEM A CIDADE (Diversos predios e blocos territorias como se fossem bairros)
 		<-
