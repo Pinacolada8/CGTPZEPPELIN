@@ -11,18 +11,18 @@ const char * paths [] = {//Local das texturas
     "GameResources/Textures/Credits.png",            //3  -- Textura dos Creditos
     "GameResources/Textures/Options.png",            //4  -- Textura das Opcoes
     "GameResources/Textures/Loading.png",            //5  -- Textura da tela de Loading
-    "GameResources/Textures/SkyBox/Day/ft.tga",      //6  -- Textura da Skybox
-    "GameResources/Textures/SkyBox/Day/bk.tga",      //7  -- Textura da Skybox
-    "GameResources/Textures/SkyBox/Day/rt.tga",      //8  -- Textura da Skybox
-    "GameResources/Textures/SkyBox/Day/lf.tga",      //9  -- Textura da Skybox
-    "GameResources/Textures/SkyBox/Day/up.tga",      //10 -- Textura da Skybox
-    "GameResources/Textures/SkyBox/Day/dn.tga",      //11 -- Textura da Skybox
-    "GameResources/Textures/SkyBox/Night/ft.tga",    //12 -- Textura da Skybox
-    "GameResources/Textures/SkyBox/Night/bk.tga",    //13 -- Textura da Skybox
-    "GameResources/Textures/SkyBox/Night/rt.tga",    //14 -- Textura da Skybox
-    "GameResources/Textures/SkyBox/Night/lf.tga",    //15 -- Textura da Skybox
-    "GameResources/Textures/SkyBox/Night/up.tga",    //16 -- Textura da Skybox
-    "GameResources/Textures/SkyBox/Night/dn.tga",    //17 -- Textura da Skybox
+    "GameResources/Textures/Skybox/Day/ft.tga",      //6  -- Textura da Skybox
+    "GameResources/Textures/Skybox/Day/bk.tga",      //7  -- Textura da Skybox
+    "GameResources/Textures/Skybox/Day/rt.tga",      //8  -- Textura da Skybox
+    "GameResources/Textures/Skybox/Day/lf.tga",      //9  -- Textura da Skybox
+    "GameResources/Textures/Skybox/Day/up.tga",      //10 -- Textura da Skybox
+    "GameResources/Textures/Skybox/Day/dn.tga",      //11 -- Textura da Skybox
+    "GameResources/Textures/Skybox/Night/ft.tga",    //12 -- Textura da Skybox
+    "GameResources/Textures/Skybox/Night/bk.tga",    //13 -- Textura da Skybox
+    "GameResources/Textures/Skybox/Night/rt.tga",    //14 -- Textura da Skybox
+    "GameResources/Textures/Skybox/Night/lf.tga",    //15 -- Textura da Skybox
+    "GameResources/Textures/Skybox/Night/up.tga",    //16 -- Textura da Skybox
+    "GameResources/Textures/Skybox/Night/dn.tga",    //17 -- Textura da Skybox
     
 };
 
