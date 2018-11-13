@@ -11,7 +11,7 @@ void configura3D(){
     gluPerspective(FOV_DEFAULT, ASPECT_RATIO, 1,VIEW_DISTANCE);
     
     glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
+    glLoadIdentity();    
 }
 
 void atualizaTela() { //Faz com que o computador atue com a maior quantidade de fps que ele conseguirs

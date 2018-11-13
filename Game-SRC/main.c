@@ -37,11 +37,11 @@ int main(int argc, char** argv) {
     
     //Configuracoes
        
-    glEnable(GL_BLEND );
+    glEnable(GL_BLEND);
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_NORMALIZE);
     glEnable(GL_TEXTURE_2D);
-    //glEnable(GL_CULL_FACE);
+    glDisable(GL_CULL_FACE);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  
     glutSetKeyRepeat(GLUT_KEY_REPEAT_OFF);
     glClearColor(1, 1, 1, 1); 

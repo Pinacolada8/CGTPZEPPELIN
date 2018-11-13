@@ -1,7 +1,9 @@
+#include <GL/glew.h>
+
 #include "Geral.h"
 #include "GLM/glm.h"
 
-#define QUANTIDADE_OBJETOS3D 3 // Quantidade total de objetos 3D que sao carregados
+#define QUANTIDADE_OBJETOS3D 4 // Quantidade total de objetos 3D que sao carregados
 
 
 const char * pathsModels [] = {//Local das texturas
@@ -12,6 +14,7 @@ const char * pathsModels [] = {//Local das texturas
     //"GameResources/Models/Tropical_Islands/TropicalIslands.obj",// Cidade Com Problema
     //"GameResources/Models/Sirus5ColonialCity/sirus_city.obj",//Outra Cidade pesada
     //"GameResources/Models/CasteliaCity/CasteliaCity.obj",  //Cidade MUITO(MUITO MESMO) pesada, FPS extremamente baixo
+    "GameResources/Models/Cockpit/Cockpit.obj",         // 3 -- Modelo do Cockpit da Nave
     
 };
 
@@ -55,5 +58,5 @@ void makeLists(){
     int i;
     for (i=0;i<QUANTIDADE_OBJETOS3D;i++){      
         modelLists[i] = modelToList(models[i],GLM_TEXTURE | GLM_SMOOTH | GLM_COLOR);        
-    }    
+    }        
 }

@@ -14,7 +14,7 @@ void drawGame(void) {
     
     //Camera~start     
     gluLookAt(player.cameras[cameraAtual].eyeCorrection[0]*sin(cameraPitch),player.cameras[cameraAtual].eyeCorrection[1]*cos(cameraPitch),player.cameras[cameraAtual].eyeCorrection[2]*sin(cameraPitch),
-            player.cameras[cameraAtual].center[0],player.cameras[cameraAtual].center[1],player.cameras[cameraAtual].center[2],
+            player.cameras[cameraAtual].center[0]*sin(cameraRotation),player.cameras[cameraAtual].center[1],player.cameras[cameraAtual].center[2],
             player.cameras[cameraAtual].up[0],player.cameras[cameraAtual].up[1],player.cameras[cameraAtual].up[2]);     
     //end~Camera
     
@@ -31,14 +31,18 @@ void drawGame(void) {
     glEnable(masterLight);    
     
     //ObjetoPrincipal~start
-    drawUFO(&models[0],rotationUFO);
+    drawUFO(!cockpitON, rotationUFO);
     //end~ObjetoPrincipal
     
     //Cenario~start
     drawCity();
     //end~Cenario    
     
-    glDisable(GL_LIGHTING);
+    //Cockpit~start
+    drawCockpit(cockpitON); //COM VIDRO!!!
+    //end~Cockpit
+    
+    glDisable(GL_LIGHTING);   
     
     drawRelogio(TIMER_POSX,TIMER_POSY,getTimer());    
     

@@ -70,8 +70,9 @@
 #define PLAYER_STARTPOSZ -5 //Posicao Z de inicio do jogador
 #define PLAYER_STARTANGLE 0 //Posicao da rotacao inicial do jogador
 
-#define CAMERA_QTDE 5 //Quantidade de cameras no jogador
+#define CAMERA_QTDE 6 //Quantidade de cameras no jogador
 #define CAMERA_PITCH_SPEED 0.1 //Velocidade da mudanca do pitch da camera
+#define CAMERA_ROTATION_SPEED 0.3 // Velocidade de rotacao da camera
 
 #define CITY_SCALEMULTIPLAYER 2000 //Multiplicador para o tamanho da cidade
 #define CITY_BLOCK_QTDE 5 //Quantidade de blocos de cidade(Bairros)
@@ -119,7 +120,8 @@ void specialKeysRelease(int key,int x,int y);
 void drawRelogio(int x,int y,unsigned long int relog);
 void drawNotificationSquare(int x, int y,int base,int alt, GLuint textID);
 void drawFullScreen(GLuint idTextura);
-void drawUFO(GLMmodel ** model, float rotation);
+void drawUFO(bool active, float rotation);
+void drawCockpit(bool active);
 void drawTextHUD (int x,int y,char * str);
 void drawSkyBox(int skyBoxDistance,GLuint * idText);
 void drawCity();
@@ -139,6 +141,7 @@ void initPlayer(PlayerObject * o, void (*d)(float x, float y, float z,GLuint idT
 void loadPlayer(float x, float y, float z,float rotationAngle, float color[4], int CamerasQte,CameraObject * cameras, GLuint * TextId);
 //Cameras
 void startCameras();
+void cameraRotationUpdate();
 //Physics
 void physicsUpdate();
 //Timer
@@ -181,6 +184,7 @@ extern GLuint modelLists[];
 //GameLogic
 extern float const tickFreq;
 extern float rotationUFO;
+extern bool cockpitON;
 extern bool lightON;
 extern bool fogON;
 extern GLenum masterLight;
@@ -191,6 +195,8 @@ extern PlayerObject player;
 extern CameraObject * cameras;
 extern int cameraAtual;
 extern float cameraPitch;
+extern float cameraRotation;
+extern int cameraRotationDirection;
 //Physics
 extern int fowardVariation;
 extern int rotationVariation;

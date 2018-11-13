@@ -50,11 +50,11 @@ void drawRelogio(int x,int y,unsigned long int relog){
     //----
 }
 
-
-
 void drawNotificationSquare(int x, int y,int base,int alt, GLuint idText){
     //Para desenhar em 2D
     glDisable(GL_DEPTH_TEST);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); 
     glMatrixMode(GL_PROJECTION);
     glPushMatrix();
     glLoadIdentity();
@@ -86,6 +86,7 @@ void drawNotificationSquare(int x, int y,int base,int alt, GLuint idText){
     glMatrixMode(GL_MODELVIEW);
     glPopMatrix();
     glEnable(GL_DEPTH_TEST);
+    glDisable(GL_BLEND);
     //----
 
 }
@@ -119,19 +120,33 @@ void drawFullScreen(GLuint idText) {
     //----
 }
 
-void drawUFO(GLMmodel ** model, float rotation){
-    glPushMatrix();
-    glRotatef(rotation,0,1,0);
-    glCallList(modelLists[0]);
-    glPopMatrix();
-    glPushMatrix();
-    glTranslatef(0,0.5,0);
-    glScalef(0.5,0.5,0.5);    
-    //glRotatef(180,0,1,0);
-    glRotatef(-90,1,0,0);    
-    glCallList(modelLists[1]);
-    //glmDraw(model[1],GLM_COLOR | GLM_SMOOTH );
-    glPopMatrix();
+void drawUFO(bool active, float rotation){
+    if (active){
+        glPushMatrix();
+            glRotatef(rotation, 0, 1, 0);
+            glCallList(modelLists[0]);
+        glPopMatrix();
+        glPushMatrix();
+            glTranslatef(0, 0.5, 0);
+            glScalef(0.5, 0.5, 0.5);
+            //glRotatef(180,0,1,0);
+            glRotatef(-90, 1, 0, 0);
+            glCallList(modelLists[1]);
+            //glmDraw(model[1],GLM_COLOR | GLM_SMOOTH );
+        glPopMatrix(); 
+    }
+    
+}
+
+void drawCockpit(bool active){
+    if (active){
+        glPushMatrix();
+        glTranslatef(0,0,-2);
+        glScalef(10,10,10);
+        glRotatef(90,0,1,0);
+        glCallList(modelLists[3]);
+        glPopMatrix();
+    }   
 }
 
 void texturedSquare(GLuint idText){

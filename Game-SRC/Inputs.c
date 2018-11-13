@@ -9,7 +9,7 @@
 void teclado(unsigned char key, int x, int y) {    
     fowardBoost = glutGetModifiers() == GLUT_ACTIVE_SHIFT;
     
-    switch (key) {
+    switch (key) {        
         // Tecla ESC
         case 27:
             activateInGameMenu();               
@@ -46,13 +46,24 @@ void teclado(unsigned char key, int x, int y) {
             break;
             
         case '1':
+            cockpitON = False;
             cameraAtual = 0;
             cameraPitch = M_PI_4;
             break; 
             
         case '2':
+            cockpitON = False;
             cameraAtual = 1;
-            break; 
+            break;
+            
+        case '3': 
+            cameraRotation = 0;
+            if(!cockpitON){
+                cockpitON = True;
+                cameraAtual = 5;
+                cameraPitch = M_PI_4;                
+            }                          
+            break;
             
         case 'c':
         case 'C':
@@ -151,7 +162,15 @@ void specialKeysPress(int key,int x,int y){
             
         case GLUT_KEY_DOWN:
             altitudeVariation = -1;
-            break;           
+            break;
+            
+        case GLUT_KEY_LEFT:
+            cameraRotationDirection = 1;
+            break;
+            
+        case GLUT_KEY_RIGHT:
+            cameraRotationDirection = -1;
+            break;
      
         default:
             break;
@@ -165,6 +184,14 @@ void specialKeysRelease(int key,int x,int y){
             break;
         case GLUT_KEY_DOWN:
             altitudeVariation = 0;
+            break;
+            
+        case GLUT_KEY_LEFT:
+            cameraRotationDirection = 0;
+            break;
+            
+        case GLUT_KEY_RIGHT:
+            cameraRotationDirection = 0;
             break;
             
         default:

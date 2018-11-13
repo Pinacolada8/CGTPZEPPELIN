@@ -7,6 +7,7 @@
 const float tickFreq = 1000/TICK_MSEC;//Representa a Frequencia do programa
 const float DefaultColor[] = {1,1,1,1};
 
+bool cockpitON = False;
 bool lightON = True;
 bool fogON = False;
 GLenum masterLight = GL_LIGHT0;
@@ -79,6 +80,7 @@ void tick(int i){
     }
 
     physicsUpdate();//Atualizacao da fisica do jogo (Movimento, ETC.)
+    cameraRotationUpdate();//Atualiza a rotacao da camera
     
     rotationUFO = (int)(rotationUFO + UFO_ROTATIONSPEED) % 360;
 
